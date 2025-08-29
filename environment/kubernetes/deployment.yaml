@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: transformer-api
+  labels:
+    app: transformer-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: transformer-api
+  template:
+    metadata:
+      labels:
+        app: transformer-api
+    spec:
+      containers:
+      - name: transformer-api
+        image: transformer-serve:latest
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            memory: "2Gi"
+            cpu: "1"
+            nvidia.com/gpu: 1
+          limits:
+            memory: "4Gi"
+            cpu: "2"
+            nvidia.com/gpu: 1
+        env:
+        - name: NVIDIA_VISIBLE_DEVICES
+          value: "all"
+        - name: NVIDIA_DRIVER_CAPABILITIES
+          value: "compute,utility"
+      tolerations:
+      - key: "nvidia.com/gpu"
+        operator: "Exists"
+        effect: "NoSchedule"

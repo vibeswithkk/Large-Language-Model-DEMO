@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: transformer-api-config
+  namespace: transformer-demo
+data:
+  # API configuration
+  MAX_WORKERS: "4"
+  TIMEOUT: "300"
+  
+  # Model configuration
+  MODEL_TYPE: "advanced"
+  MAX_LENGTH: "512"
+  TEMPERATURE: "0.8"
+  
+  # Performance configuration
+  BATCH_SIZE: "8"
+  CACHE_SIZE: "1000"
+  
+  # Logging configuration
+  LOG_LEVEL: "INFO"
+  LOG_FORMAT: "json"

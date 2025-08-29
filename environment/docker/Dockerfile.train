@@ -1,0 +1,61 @@
+# Training Dockerfile with CUDA support
+FROM nvcr.io/nvidia/pytorch:23.08-py3
+
+# Set working directory
+WORKDIR /app
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+ENV NVIDIA_VISIBLE_DEVICES=all
+ENV NVIDIA_DRIVER_CAPABILITIES=compute,utility
+
+# Install additional system dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    curl \
+    git \
+    wget \
+    ca-certificates \
+    rsync \
+    htop \
+    vim \
+    && rm -rf /var/lib/apt/lists/*
+
+# Upgrade pip
+RUN pip install --no-cache-dir --upgrade pip
+
+# Copy requirements file
+COPY requirements.txt .
+
+# Install Python dependencies with CUDA optimizations
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Install additional tools for training and monitoring
+RUN pip install --no-cache-dir \
+    tensorboard \
+    wandb \
+    tqdm \
+    psutil \
+    gpustat \
+    deepspeed
+
+# Create directories for data, outputs, and logs
+RUN mkdir -p data output logs checkpoints
+
+# Copy project files
+COPY . .
+
+# Set proper permissions
+RUN chmod -R 755 /app
+
+# Create non-root user with proper permissions
+RUN useradd --create-home --shell /bin/bash --uid 1000 trainer && \
+    chown -R trainer:trainer /app && \
+    usermod -aG sudo trainer
+
+# Switch to non-root user
+USER trainer
+
+# Set entrypoint for training
+ENTRYPOINT ["python", "src/training/train_deepspeed.py"]

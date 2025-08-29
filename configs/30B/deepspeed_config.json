@@ -1,0 +1,75 @@
+{
+    "train_batch_size": 128,
+    "train_micro_batch_size_per_gpu": 4,
+    "gradient_accumulation_steps": 32,
+    "steps_per_print": 100,
+    "wall_clock_breakdown": false,
+    "zero_optimization": {
+        "stage": 3,
+        "overlap_comm": true,
+        "contiguous_gradients": true,
+        "sub_group_size": 1e9,
+        "reduce_bucket_size": "auto",
+        "stage3_prefetch_bucket_size": "auto",
+        "stage3_param_persistence_threshold": "auto",
+        "stage3_max_live_parameters": 1e9,
+        "stage3_max_reuse_distance": 1e9,
+        "stage3_gather_16bit_weights_on_model_save": true
+    },
+    "gradient_clipping": 1.0,
+    "fp16": {
+        "enabled": true,
+        "auto_cast": true,
+        "loss_scale": 0,
+        "initial_scale_power": 16,
+        "hysteresis": 2,
+        "min_loss_scale": 1
+    },
+    "bf16": {
+        "enabled": false
+    },
+    "optimizer": {
+        "type": "AdamW",
+        "params": {
+            "lr": 1e-4,
+            "betas": [0.9, 0.95],
+            "eps": 1e-8,
+            "weight_decay": 0.1
+        }
+    },
+    "scheduler": {
+        "type": "WarmupDecayLR",
+        "params": {
+            "warmup_min_lr": 0,
+            "warmup_max_lr": 1e-4,
+            "warmup_num_steps": 2000,
+            "total_num_steps": 100000
+        }
+    },
+    "activation_checkpointing": {
+        "partition_activations": true,
+        "cpu_checkpointing": false,
+        "contiguous_memory_optimization": false,
+        "number_checkpoints": null,
+        "synchronize_checkpoint_boundary": false,
+        "profile": false
+    },
+    "tensorboard": {
+        "enabled": true,
+        "output_path": "logs/",
+        "job_name": "advanced_transformer_30b"
+    },
+    "flops_profiler": {
+        "enabled": false,
+        "profile_step": 1,
+        "module_depth": -1,
+        "top_modules": 1,
+        "detailed": true,
+        "output_file": null
+    },
+    "communication": {
+        "sparse_gradients": true,
+        "overlap_param_gather": true,
+        "reduce_scatter": true
+    }
+}
