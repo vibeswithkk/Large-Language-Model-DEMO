@@ -63,7 +63,14 @@ New license file for the project:
 
 - **[LICENSE](file:///C:/Users/wahyu/Documents/Large-Language-Model-DEMO/LICENSE)**: Learning License v1.0 – Developer Educational License with terms for educational use
 
-### 9. Main README Enhancement
+### 9. Git Configuration Files
+
+New Git configuration files:
+
+- **[.gitattributes](file:///C:/Users/wahyu/Documents/Large-Language-Model-DEMO/.gitattributes)**: Proper handling of different file types in the repository
+- **[.gitignore](file:///C:/Users/wahyu/Documents/Large-Language-Model-DEMO/.gitignore)**: Exclusion of unnecessary files and directories from Git tracking
+
+### 10. Main README Enhancement
 
 Comprehensive enhancement of the main project documentation:
 
@@ -104,10 +111,11 @@ Comprehensive enhancement of the main project documentation:
 - Docker configurations optimized for performance and security
 - Kubernetes deployments include autoscaling and monitoring
 - Model management utilities follow best practices for checkpoint management
+- Git configuration ensures proper handling of different file types
 
 ## Files Summary
 
-### Newly Created Files (13 files):
+### Newly Created Files (16 files):
 1. [tutorials/07_practical_implementation_guide.ipynb](file:///C:/Users/wahyu/Documents/Large-Language-Model-DEMO/tutorials/07_practical_implementation_guide.ipynb)
 2. [docs/training_pipeline.md](file:///C:/Users/wahyu/Documents/Large-Language-Model-DEMO/docs/training_pipeline.md)
 3. [docs/rlhf_pipeline.md](file:///C:/Users/wahyu/Documents/Large-Language-Model-DEMO/docs/rlhf_pipeline.md)
@@ -120,7 +128,10 @@ Comprehensive enhancement of the main project documentation:
 10. [k8s/deployment.yaml](file:///C:/Users/wahyu/Documents/Large-Language-Model-DEMO/k8s/deployment.yaml)
 11. [k8s/README.md](file:///C:/Users/wahyu/Documents/Large-Language-Model-DEMO/k8s/README.md)
 12. [src/model/model_utils.py](file:///C:/Users/wahyu/Documents/Large-Language-Model-DEMO/src/model/model_utils.py)
-13. [LICENSE](file:///C:/Users/wahyu/Documents/Large-Language-Model-DEMO/LICENSE)
+13. [models/README.md](file:///C:/Users/wahyu/Documents/Large-Language-Model-DEMO/models/README.md)
+14. [LICENSE](file:///C:/Users/wahyu/Documents/Large-Language-Model-DEMO/LICENSE)
+15. [.gitattributes](file:///C:/Users/wahyu/Documents/Large-Language-Model-DEMO/.gitattributes)
+16. [.gitignore](file:///C:/Users/wahyu/Documents/Large-Language-Model-DEMO/.gitignore)
 
 ### Updated Files (3 files):
 1. [tutorials/README.md](file:///C:/Users/wahyu/Documents/Large-Language-Model-DEMO/tutorials/README.md)
@@ -136,4 +147,4 @@ Comprehensive enhancement of the main project documentation:
 
 The Large Language Model DEMO project has been successfully enhanced with comprehensive documentation, implementation files, and configuration files that provide a complete learning and deployment experience. All new content maintains the professional quality and educational value of the project while following industry best practices.
 
-The enhancements address all previously empty folders and files, providing students and developers with a complete reference for building, training, and deploying large language models at both learning and enterprise scales. The main README.md has been completely restructured to provide a professional, comprehensive overview of the entire project with clear organization, diagrams, and detailed information.
+The enhancements address all previously empty folders and files, providing students and developers with a complete reference for building, training, and deploying large language models at both learning and enterprise scales. The main README.md has been completely restructured to provide a professional, comprehensive overview of the entire project with clear organization, diagrams, and detailed information. The addition of the .gitattributes file ensures proper handling of different file types in the Git repository.

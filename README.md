@@ -145,6 +145,8 @@ Monitoring & Observability:
 Large-Language-Model-DEMO/
 ├── README.md                    # Project documentation
 ├── LICENSE                      # Learning License v1.0
+├── .gitattributes               # Git file attributes configuration
+├── .gitignore                   # Git file exclusion configuration
 ├── requirements.txt             # Python dependencies
 ├── PROJECT_UPGRADE_SUMMARY.md   # Recent enhancement log
 ├── PROJECT_ENHANCEMENT_SUMMARY.md # Comprehensive enhancement summary

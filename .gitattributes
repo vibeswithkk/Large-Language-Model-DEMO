@@ -1,0 +1,107 @@
+# .gitattributes file for Large Language Model DEMO project
+# This file configures how Git handles different file types in the repository
+
+# Set default behavior for all files
+* text=auto
+
+# Explicitly mark text files that should always be treated as text
+*.py text diff=python
+*.js text
+*.json text
+*.yaml text
+*.yml text
+*.md text
+*.txt text
+*.sh text
+*.bat text
+*.cmd text
+*.sql text
+*.html text
+*.css text
+*.xml text
+*.csv text
+
+# Mark Jupyter notebooks with special diff and merge handling
+*.ipynb text diff=ipynb merge=union
+
+# Explicitly mark binary files that should never be treated as text
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.mp4 binary
+*.mov binary
+*.wav binary
+*.mp3 binary
+*.pdf binary
+*.exe binary
+*.dll binary
+*.so binary
+*.dylib binary
+*.class binary
+*.jar binary
+*.war binary
+*.ear binary
+*.zip binary
+*.tar binary
+*.gz binary
+*.bz2 binary
+*.7z binary
+
+# Model files - treat as binary to avoid corruption
+*.pt binary
+*.pth binary
+*.bin binary
+*.onnx binary
+*.h5 binary
+*.hdf5 binary
+*.ckpt binary
+*.safetensors binary
+*.gguf binary
+*.mlmodel binary
+
+# Docker and container files
+Dockerfile text
+*.dockerfile text
+.dockerignore text
+
+# Kubernetes files
+*.yaml kubernetes text
+*.yml kubernetes text
+
+# Configuration files
+*.cfg text
+*.conf text
+*.ini text
+*.toml text
+*.env text
+
+# Git files
+.gitignore text
+.gitattributes text
+
+# Documentation files
+*.rst text
+*.tex text
+*.bib text
+
+# Development environment files
+*.code-workspace text
+*.vscode/* text
+
+# Testing files
+*.test.py text
+*.spec.py text
+
+# Log files - treat as text but don't diff
+*.log text diff=unified
+
+# Temporary and cache files - no need to track in Git
+*.tmp text
+*.temp text
+
+# OS generated files
+.DS_Store binary
+Thumbs.db binary
+desktop.ini binary
