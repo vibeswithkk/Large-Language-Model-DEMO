@@ -10,13 +10,13 @@ This document provides a comprehensive overview of the training pipeline for the
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                   Training Orchestration                    │
-│  Experiment Tracking, Hyperparameter Optimization          │
+│  Experiment Tracking, Hyperparameter Optimization           │
 ├─────────────────────────────────────────────────────────────┤
 │                  Distributed Training                       │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐         │
-│  │   Trainer   │  │   Trainer   │  │   Trainer   │         │
-│  │   Node 1    │  │   Node 2    │  │   Node N    │         │
-│  └─────────────┘  └─────────────┘  └─────────────┘         │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐          │
+│  │   Trainer   │  │   Trainer   │  │   Trainer   │          │
+│  │   Node 1    │  │   Node 2    │  │   Node N    │          │
+│  └─────────────┘  └─────────────┘  └─────────────┘          │
 ├─────────────────────────────────────────────────────────────┤
 │                Model Orchestration Layer                    │
 │  ┌──────────────────────────────────────────────────────┐   │
