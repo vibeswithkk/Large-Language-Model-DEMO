@@ -10,26 +10,26 @@ This document provides a comprehensive overview of the Reinforcement Learning wi
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    Human Feedback Collection                │
-│  Preference Data, Ranking Data, Demonstration Data         │
+│  Preference Data, Ranking Data, Demonstration Data          │
 ├─────────────────────────────────────────────────────────────┤
 │                Reward Modeling Pipeline                     │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐         │
-│  │ Data        │  │ Reward      │  │ Reward      │         │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐          │
+│  │ Data        │  │ Reward      │  │ Reward      │          │
 │  │ Preprocessing│  │ Model       │  │ Model       │         │
-│  │             │  │ Training    │  │ Evaluation  │         │
-│  └─────────────┘  └─────────────┘  └─────────────┘         │
+│  │             │  │ Training    │  │ Evaluation  │          │
+│  └─────────────┘  └─────────────┘  └─────────────┘          │
 ├─────────────────────────────────────────────────────────────┤
 │              Reinforcement Learning Pipeline                │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐         │
-│  │ Policy      │  │ PPO         │  │ Policy      │         │
-│  │ Generation  │  │ Training    │  │ Evaluation  │         │
-│  └─────────────┘  └─────────────┘  └─────────────┘         │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐          │
+│  │ Policy      │  │ PPO         │  │ Policy      │          │
+│  │ Generation  │  │ Training    │  │ Evaluation  │          │
+│  └─────────────┘  └─────────────┘  └─────────────┘          │
 ├─────────────────────────────────────────────────────────────┤
 │                Safety & Alignment Layer                     │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐         │
-│  │ Constitutional│ │ Red Teaming │ │ Ethical     │         │
-│  │ AI          │  │             │ │ Constraints │         │
-│  └─────────────┘  └─────────────┘  └─────────────┘         │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐          │
+│  │ Constitutional│ │ Red Teaming │ │ Ethical     │          │
+│  │ AI          │  │             │ │ Constraints │           │
+│  └─────────────┘  └─────────────┘  └─────────────┘          │
 └─────────────────────────────────────────────────────────────┘
 ```
 
