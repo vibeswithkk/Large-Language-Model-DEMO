@@ -10,16 +10,16 @@ This document provides a comprehensive guide to deploying Advanced Transformer l
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    Load Balancer / API Gateway              │
-│  SSL Termination, Rate Limiting, Authentication            │
+│  SSL Termination, Rate Limiting, Authentication             │
 ├─────────────────────────────────────────────────────────────┤
 │                  Kubernetes Service Mesh                    │
 │  Service Discovery, Traffic Management, Observability       │
 ├─────────────────────────────────────────────────────────────┤
 │                 Inference Service Layer                     │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐         │
-│  │   Model     │  │   Model     │  │   Model     │         │
-│  │  Server 1   │  │  Server 2   │  │  Server N   │         │
-│  └─────────────┘  └─────────────┘  └─────────────┘         │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐          │
+│  │   Model     │  │   Model     │  │   Model     │          │
+│  │  Server 1   │  │  Server 2   │  │  Server N   │          │
+│  └─────────────┘  └─────────────┘  └─────────────┘          │
 ├─────────────────────────────────────────────────────────────┤
 │                Model Orchestration Layer                    │
 │  ┌──────────────────────────────────────────────────────┐   │
@@ -30,10 +30,10 @@ This document provides a comprehensive guide to deploying Advanced Transformer l
 │  └──────────────────────────────────────────────────────┘   │
 ├─────────────────────────────────────────────────────────────┤
 │                 Monitoring & Analytics                      │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐         │
-│  │  Metrics    │  │   Logging   │  │ Performance │         │
-│  │  Collection │  │   Aggregation│ │   Analysis  │         │
-│  └─────────────┘  └─────────────┘  └─────────────┘         │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐          │
+│  │  Metrics    │  │   Logging   │  │ Performance │          │
+│  │  Collection │  │   Aggregation│ │   Analysis  │          │
+│  └─────────────┘  └─────────────┘  └─────────────┘          │
 └─────────────────────────────────────────────────────────────┘
 ```
 
